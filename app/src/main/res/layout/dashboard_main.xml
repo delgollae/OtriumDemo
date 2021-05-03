@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2021. Otrium (D.J.Eranda). All rights reserved.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy of
+  ~ this software and associated documentation files (the "Software"), to deal in
+  ~ the Software without restriction, including without limitation the rights to
+  ~ use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+  ~ the Software, and to permit persons to whom the Software is furnished to do so,
+  ~ subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/user_profile_id"
+            layout="@layout/user_profile" />
+
+
+        <!-- Add guideline to align imageView to. -->
+        <LinearLayout
+            android:id="@+id/textTitlePinned"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_05_sp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textPinned"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/pinned"
+                android:textAppearance="@style/text_24_bold_dp_left_black"
+                tools:text="@string/pinned" />
+
+            <TextView
+                android:id="@+id/textPinnedViewAll"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/margin_10_sp"
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:text="@string/view_all"
+                android:textAppearance="@style/text_16dp_right_black"
+                tools:text="@string/view_all" />
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/topPinnedRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_marginTop="@dimen/margin_15_sp"
+            app:layout_constraintStart_toStartOf="@+id/textTitlePinned"
+            app:layout_constraintTop_toBottomOf="@id/textTitlePinned" />
+
+        <LinearLayout
+            android:id="@+id/textTopRepository"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_05_sp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/top_repositories"
+                android:textAppearance="@style/text_24_bold_dp_left_black"
+                tools:text="@string/top_repositories" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/margin_10_sp"
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:text="@string/view_all"
+                android:textAppearance="@style/text_16dp_right_black"
+                tools:text="@string/view_all" />
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/topRepositoriesRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:layout_marginTop="@dimen/margin_15_sp"
+            app:layout_constraintStart_toStartOf="@+id/textTopRepository"
+            app:layout_constraintTop_toBottomOf="@id/textTopRepository" />
+
+
+        <LinearLayout
+            android:id="@+id/textStarredRepository"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_05_sp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/starred_repositories"
+                android:textAppearance="@style/text_24_bold_dp_left_black"
+                tools:text="@string/top_repositories" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/margin_10_sp"
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:text="@string/view_all"
+                android:textAppearance="@style/text_16dp_right_black"
+                tools:text="@string/view_all" />
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/starredRepositoriesRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:layout_marginTop="@dimen/margin_15_sp"
+            app:layout_constraintStart_toStartOf="@+id/textStarredRepository"
+            app:layout_constraintTop_toBottomOf="@id/textStarredRepository" />
+
+
+    </LinearLayout>
+</ScrollView>

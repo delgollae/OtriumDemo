@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">GraphQL</string>
+    <string name="action_about">About</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="action_settings">Action Settings</string>
+    <string name="first_fragment_label">Fragment One</string>
+    <string name="second_fragment_label">Fragment Two</string>
+    <string name="resource_image">Resource Image</string>
+
+    <string name="profile">Profile</string>
+    <string name="profile_name">Profile Name</string>
+    <string name="user_name">User Name</string>
+    <string name="email">Profile Name</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="stars">Stars</string>
+    <string name="pinned">Pinned</string>
+    <string name="view_all"><u>View all</u></string>
+    <string name="repository_name">Repository Name</string>
+    <string name="repository_description">Repository Description</string>
+    <string name="top_repositories">Top Repositories</string>
+    <string name="starred_repositories">Starred Repositories</string>
+</resources>
